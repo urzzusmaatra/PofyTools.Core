@@ -12,7 +12,7 @@
 		public float min;
 		public float max;
 
-		public float current {
+		public float Current {
 			get {
 				return this._current;
 			}
@@ -43,7 +43,7 @@
 
 			Range.Sort (this);
 
-			this.current = this.min;
+			this.Current = this.min;
 		}
 
 		public Range Clone ()
@@ -89,8 +89,8 @@
 		public float CurrentToMaxRatio {
 			get {
 				if (max != 0)
-					return this.current / this.max;
-				return this.current / float.Epsilon;
+					return this.Current / this.max;
+				return this.Current / float.Epsilon;
 			}
 		}
 
@@ -114,7 +114,7 @@
 			get { return UnityEngine.Random.Range ((int)this.min, (int)this.max + 1); }
 		}
 
-		public float length {
+		public float Length {
 			get {
 				return this.max - this.min;
 			}
@@ -182,6 +182,21 @@
 			return value;
 		}
 
+        public bool AtMin
+        {
+            get
+            {
+                return Current == min;
+            }
+        }
+
+        public bool AtMax
+        {
+            get
+            {
+                return Current == max;
+            }
+        }
 		#endregion
 
 		#region STATIC METHODS
@@ -221,7 +236,7 @@
 				else if (index == 1)
 					return this.max;
 				else if (index == 2)
-					return this.current;
+					return this.Current;
 				else
 					throw new System.ArgumentOutOfRangeException ("index");
 			}
@@ -231,7 +246,7 @@
 				else if (index == 1)
 					this.max = value;
 				else if (index == 2)
-					this.current = value;
+					this.Current = value;
 				else
 					throw new System.ArgumentOutOfRangeException ("index");
 			}
