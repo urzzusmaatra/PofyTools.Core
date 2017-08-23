@@ -19,12 +19,12 @@
 
     public interface ICollidable2D
     {
-        Rigidbody2D selfRigidbody2D
+        Rigidbody2D SelfRigidbody2D
         {
             get;
         }
 
-        Collider2D selfCollider2D
+        Collider2D SelfCollider2D
         {
             get;
         }
@@ -32,7 +32,7 @@
 
     public interface ITransformable
     {
-        Transform selfTransform
+        Transform SelfTransform
         {
             get;
         }
@@ -40,7 +40,7 @@
 
     public interface IRenderable
     {
-        MeshRenderer selfRenderer
+        MeshRenderer SelfRenderer
         {
             get;
         }

@@ -9,7 +9,7 @@
 
 		protected Transform _selfTransform;
 
-		public Transform selfTransform {
+		public Transform SelfTransform {
 			get {
 				return this._selfTransform;
 			}

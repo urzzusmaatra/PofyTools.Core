@@ -169,7 +169,7 @@ namespace PofyTools
 
         protected Transform _selfTransform;
 
-        public Transform selfTransform
+        public Transform SelfTransform
         {
             get
             {
