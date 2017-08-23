@@ -197,6 +197,14 @@
                 return Current == max;
             }
         }
+
+        public float SetPercent
+        {
+            set
+            {
+                Current = (max - min) * value;
+            }
+        }
 		#endregion
 
 		#region STATIC METHODS
